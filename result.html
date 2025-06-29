@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        table, th, td {
+            border: 1px solid #666;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        img {
+            margin-top: 20px;
+            border: 1px solid #aaa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p><strong>Top Prediction:</strong> {{ label }} ({{ confidence }}%)</p>
+    <p><strong>Second Best:</strong> {{ second_label }} ({{ second_confidence }}%)</p>
+
+    <img src="{{ image_path }}" alt="Uploaded Image" width="300">
+
+
+
+    <br><a href="/">🔄 Predict Another</a>
+</body>
+</html>
